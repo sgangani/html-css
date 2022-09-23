@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2-FizzBuzz Algoridham</title>
+</head>
+
+<body>
+    <h1>2-fizzbuzz-algoridhams!</h1>
+    <h3>Write a function which check given input/parameter:</h3>
+    <ul>
+        <li>if input/parameter is divisible by 3 print => Fizz</li>
+        <li>if input/parameter is divisible by 5 print => Buzz</li>
+        <li>if input/parameter is divisible by 3 or 5 print => FizzBuzz</li>
+        <li>if input/parameter is NOT divisible by 3 or 5 print => Given input number/value</li>
+        <li>if parameter is other than number/value print => 'Nan - Not a Numer ! please Input Number</li>
+    </ul>
+
+    <script>
+        function checkDivisible(number) {
+            if (typeof number === 'number') {
+                let answer;
+                if (number % 3 == 0) {
+                    answer = "Fizz";
+                }
+                if (number % 5 == 0) {
+                    answer = "Buzz";
+                }
+                if (number % 3 == 0 && number % 5 == 0) {
+                    answer = "FizzBuzz";
+                }
+                if (number % 3 != 0 && number % 5 != 0) {
+                    answer = number;
+                }
+                return answer;
+            } else {
+                return "Not a Number ! please Input Number";
+            }
+        }
+        let number = 4;
+        let fizzBuzz = checkDivisible(number);
+        console.log(fizzBuzz);
+    </script>
+
+</body>
+
+</html>

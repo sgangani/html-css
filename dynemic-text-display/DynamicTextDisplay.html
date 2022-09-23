@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Text Display</title>
+</head>
+<link rel="stylesheet" href="DynamicTextDisplay.css">
+
+<body>
+    <div class="inputContent">
+        <label for="text">Enter Text :</label>
+        <input type="text" name="text" id="inputText" oninput="getText()">
+        <br><br>
+        <label for="fontSize">Select Font Size :</label>
+        <select id="selectFontSize" onchange="getTextSize()">
+            <option value=""></option>
+            <option id="size1" value="1px">1</option>
+            <option id="size2" value="2px">2</option>
+            <option id="size3" value="3px">3</option>
+            <option id="size4" value="4px">4</option>
+            <option id="size5" value="5px">5</option>
+            <option id="size6" value="6px">6</option>
+            <option id="size7" value="7px">7</option>
+            <option id="size8" value="8px">8</option>
+            <option id="size9" value="9px">9</option>
+            <option id="size10" value="10px">10</option>
+            <option id="size11" value="11px">11</option>
+        </select>
+    </div>
+    <div>
+        <button onclick="display()">Click Here For Display</button>
+    </div>
+    <p id="display"></p>
+    <script src="DynamicTextDisplay.js"></script>
+</body>
+
+</html>

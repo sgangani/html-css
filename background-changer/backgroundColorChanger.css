@@ -1,0 +1,15 @@
+div {
+    text-align: center;
+    margin-top: 100px;
+}
+
+select {
+    padding: 7px;
+    width: 100px;
+    border-radius: 10px;
+}
+
+header {
+    text-align: center;
+    font-size: 45px;
+}

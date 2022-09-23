@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3-Speed Limits</title>
+</head>
+
+<body>
+    <h1>5-speed-limits!</h1>
+
+    <h3>Write a function which checks given input/parameter:</h3>
+
+    <ul>
+        <li>If input/parameter is below speedlimit of 70 print => 'Good Safe Driving'</li>
+        <li>If input/parameter is above speedlimit of 70, every 5 kilometers is Penalty Point, print => 'Speed Limit
+            Crossed by Penalty Point' + Point </li>
+        <li>If Driver gets more than 10 penalty points ie. above the speed limit 120, print => 'License Suspended'</li>
+    </ul>
+
+    <script>
+        function checkSpeedLimit(limit) {
+            const MAX_PENALTY_POINT = 10;
+            const SPEED_LIMIT = 70;
+            const KMPOINT = 5;
+
+            if (limit < SPEED_LIMIT) {
+                return "Good Safe Driving";
+            }
+
+            let penaltyPoint = Math.floor((limit - SPEED_LIMIT) / KMPOINT);
+
+            if (penaltyPoint < MAX_PENALTY_POINT) {
+                return `Speed Limit Crossed by Penalty Point : ${penaltyPoint}`;
+            }
+            return `Your Penalty Point is ${penaltyPoint} Then Your License Suspended`;
+
+        }
+        let limit = 90;
+        let result = checkSpeedLimit(limit);
+        console.log(result);
+    </script>
+</body>
+
+</html>

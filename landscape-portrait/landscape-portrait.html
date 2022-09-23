@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>landscape Portrait</title>
+</head>
+
+<body>
+    <h1> 1-landscape-portrait!</h1>
+    <h3>Write a function which given width and height, return true(landscape) if width is greater than height and vice
+        versa.</h3>
+
+
+    <script>
+        function checkLandscape(width, height) {
+            return width > height;
+        }
+
+        let width = 0;
+        let height = 0;
+        let isLandscape;
+
+        console.log("1-landscape-portrait");
+
+        isLandscape = checkLandscape(width, height);
+        console.log(`Landscape: ${isLandscape}`);
+
+        width = 25;
+        height = 20;
+
+        isLandscape = checkLandscape(width, height);
+        console.log(`Landscape: ${isLandscape}`);
+
+        width = 15;
+        height = 26;
+
+        isLandscape = checkLandscape(width, height);
+        console.log(`Landscape: ${isLandscape}`);
+    </script>
+</body>
+
+</html>
